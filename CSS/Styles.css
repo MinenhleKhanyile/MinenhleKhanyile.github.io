@@ -2,8 +2,10 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #181818;
-    color: #eee;
+    /* Soft pink to lavender gradient */
+    background: linear-gradient(135deg, #ffe5ec 0%, #e0c3fc 100%);
+    color: #6d3577; /* Deep plum for text */
+    min-height: 100vh;
 }
 
 .container {
@@ -14,7 +16,8 @@ body {
 
 /* Header & Navigation */
 header {
-    background: linear-gradient(rgba(24,24,24,0.9), rgba(24,24,24,0.7)), url('img/hero-bg.jpg') center/cover no-repeat;
+    /* Pink to purple gradient overlay + background image */
+    /* background: linear-gradient(120deg, #fcb6c9cc 0%, #b388ffcc 100%),center/cover no-repeat; */
     color: #fff;
     padding-bottom: 60px;
 }
@@ -30,6 +33,7 @@ nav {
     font-size: 1.7em;
     font-weight: bold;
     letter-spacing: 2px;
+    color: #d72660;
 }
 
 nav ul {
@@ -45,9 +49,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
+    padding: 4px 8px;
+    border-radius: 7px;
 }
 nav ul li a:hover {
-    color: #ff3e55;
+    color: #fcb6c9;
+    background: #fff4fa55;
 }
 
 .hero {
@@ -59,30 +66,35 @@ nav ul li a:hover {
     margin-bottom: 18px;
 }
 .hero h1 span {
-    color: #ff3e55;
+    color: #fcb6c9;
 }
 .hero p {
     font-size: 1.3em;
     margin-bottom: 32px;
+    color: #ffe5ec;
 }
 .btn {
-    background: #ff3e55;
+    background: linear-gradient(90deg, #fcb6c9 0%, #b388ff 100%);
     color: #fff;
     padding: 14px 38px;
     border-radius: 32px;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 600;
-    transition: background 0.2s;
+    border: none;
+    box-shadow: 0 2px 12px #fcb6c955;
+    transition: background 0.2s, box-shadow 0.2s;
+    cursor: pointer;
 }
 .btn:hover {
-    background: #ff6e89;
+    background: linear-gradient(90deg, #b388ff 0%, #fcb6c9 100%);
+    box-shadow: 0 6px 24px #fcb6c988;
 }
 
 /* About */
 #about {
     padding: 70px 0 40px 0;
-    background: #232323;
+    background: linear-gradient(135deg, #fff0f6 0%, #e0c3fc 100%);
 }
 .about-container {
     display: flex;
@@ -95,15 +107,15 @@ nav ul li a:hover {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ff3e55;
-    box-shadow: 0 2px 20px #0002;
+    border: 4px solid #fcb6c9;
+    box-shadow: 0 2px 20px #fcb6c955;
 }
 .about-text {
     flex: 1;
 }
 .about-text h2 {
     font-size: 2em;
-    color: #ff3e55;
+    color: #b388ff;
 }
 .about-text p {
     font-size: 1.08em;
@@ -119,20 +131,21 @@ nav ul li a:hover {
     font-size: 1em;
 }
 .about-text ul li a {
-    color: #ff3e55;
+    color: #d72660;
     text-decoration: none;
 }
 .about-text ul li a:hover {
     text-decoration: underline;
+    color: #b388ff;
 }
 
 /* Skills */
 #skills {
-    background: #181818;
+    background: linear-gradient(90deg, #e0c3fc 0%, #fff0f6 100%);
     padding: 60px 0 40px 0;
 }
 #skills h2 {
-    color: #ff3e55;
+    color: #b388ff;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -143,24 +156,37 @@ nav ul li a:hover {
     justify-content: center;
 }
 .skill {
-    background: #232323;
+    background: #fff0f6;
     padding: 13px 35px;
     border-radius: 22px;
-    color: #fff;
+    color: #b388ff;
     font-weight: 500;
     font-size: 1em;
-    box-shadow: 0 2px 8px #0001;
-    border: 1px solid #ff3e55;
+    box-shadow: 0 2px 8px #b388ff15;
+    border: 1px solid #fcb6c9;
     margin-bottom: 10px;
+    transition: background 0.2s, color 0.2s;
+}
+.skill:hover {
+    background: #fcb6c9;
+    color: #fff;
 }
 
-/* Portfolio */
+/* Portfolio - Animated Gradient */
 #portfolio {
-    background: #232323;
     padding: 60px 0 40px 0;
+    background: linear-gradient(-45deg, #ffe5ec, #e0c3fc, #fcb6c9, #b388ff);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
 }
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 #portfolio h2 {
-    color: #ff3e55;
+    color: #d72660;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -171,16 +197,16 @@ nav ul li a:hover {
     justify-content: center;
 }
 .portfolio-item {
-    background: #181818;
+    background: #fff0f6;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 2px 12px #0002;
+    box-shadow: 0 2px 12px #fcb6c922;
     width: 310px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .portfolio-item:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 6px 32px #0003;
+    box-shadow: 0 6px 32px #b388ff55;
 }
 .portfolio-item img {
     width: 100%;
@@ -192,22 +218,22 @@ nav ul li a:hover {
 }
 .portfolio-desc h3 {
     margin: 0 0 8px 0;
-    color: #ff3e55;
+    color: #b388ff;
     font-size: 1.15em;
 }
 .portfolio-desc p {
     margin: 0;
     font-size: 0.99em;
-    color: #e2e2e2;
+    color: #6d3577;
 }
 
 /* Contact */
 #contact {
     padding: 60px 0 40px 0;
-    background: #181818;
+    background: linear-gradient(90deg, #fff0f6 0%, #e0c3fc 100%);
 }
 #contact h2 {
-    color: #ff3e55;
+    color: #d72660;
     text-align: center;
     margin-bottom: 28px;
 }
@@ -221,15 +247,19 @@ nav ul li a:hover {
 .contact-form input,
 .contact-form textarea {
     padding: 13px;
-    border: 1px solid #ff3e55;
+    border: 1px solid #fcb6c9;
     border-radius: 8px;
-    background: #232323;
-    color: #fff;
+    background: #fff0f6;
+    color: #6d3577;
     font-size: 1em;
     resize: none;
 }
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #b388ff;
+}
 .contact-form button {
-    background: #ff3e55;
+    background: linear-gradient(90deg, #fcb6c9 0%, #b388ff 100%);
     color: #fff;
     padding: 13px 0;
     border: none;
@@ -240,16 +270,17 @@ nav ul li a:hover {
     transition: background 0.2s;
 }
 .contact-form button:hover {
-    background: #ff6e89;
+    background: linear-gradient(90deg, #b388ff 0%, #fcb6c9 100%);
 }
 
 /* Footer */
 footer {
-    background: #232323;
+    background: #fff0f6;
     text-align: center;
     padding: 22px 0;
-    color: #ccc;
+    color: #b388ff;
     font-size: 0.98em;
+    letter-spacing: 1px;
 }
 
 /* Responsive */
