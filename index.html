@@ -2,116 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Minenhle Khanyile | Software Developer Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="CSS/Styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Minenhle Khanyile</div>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#home" title="Home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#skills" title="Skills"><i class="fas fa-code"></i></a></li>
+                <li><a href="#experience" title="Experience"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#projects" title="Projects"><i class="fas fa-folder-open"></i></a></li>
+                <li><a href="#education" title="Education"><i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/your-linkedin" target="_blank"  title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/your-github" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="#contact" title="Contact"><i class="fas fa-address-book"></i></a></li>
+                <li><a href="mailto:youremail@example.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Profile Picture / Logo -->
+            <div class="profile-logo">
+                <img src="profile.jpg" alt="Profile Logo" />
+            </div>
+
+            <!-- Info Sections -->
+            <section id="home" class="info-section">
+                <h1>Hello, I'm [Your Name]</h1>
+                <p>Welcome to my portfolio! I am a programming student passionate about building cool things with code. Scroll down to learn more about me.</p>
+            </section>
+
+            <section id="skills" class="info-section">
+                <h2>Skills</h2>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML & CSS</li>
+                    <li>Java</li>
+                    <li>C++</li>
                 </ul>
-            </nav>
-            <div class="hero">
-                <h1>Hello, I'm <span>Minenhle Khanyile</span></h1>
-                <p> Programming Student  </p>
-                <a href="#portfolio" class="btn">View My Work</a>
-            </div>
-        </div>
-    </header>
+            </section>
 
-    <!-- About -->
-    <section id="about">
-        <div class="container about-container">
-            <div class="about-img">
-                <img src="img/profile.jpg" alt="Minenhle Khanyile">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I'm Minenhle Khanyile.............
-                </p>
+            <section id="experience" class="info-section">
+                <h2>Experience</h2>
+                <p>Intern at [Company], June 2024 - August 2024</p>
+                <p>Student Developer, Open Source Projects</p>
+            </section>
+
+            <section id="projects" class="info-section">
+                <h2>Projects</h2>
                 <ul>
-                    <li><b>Email:</b> khanyileminenhle22@gmail.com</li>
-                    <li><b>Location:</b> Pietermaritzburg, South Africa</li>
-                    <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/" target="_blank">linkedin.com/in/minenhle</a></li>
+                    <li><strong>Portfolio Website</strong> - The site you are viewing now!</li>
+                    <li><strong>Todo App</strong> - Task management with React.</li>
+                    <li><strong>Data Visualizer</strong> - Python project for visualizing data.</li>
                 </ul>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Skills -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">JavaScript</div>
-                <div class="skill">Python</div>
-                <div class="skill">HTML & CSS</div>
-                <div class="skill">React</div>
-                <div class="skill">Node.js</div>
-                <div class="skill">Django</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Git & GitHub</div>
-            </div>
-        </div>
-    </section>
+            <section id="education" class="info-section">
+                <h2>Education</h2>
+                <p>BSc Computer Science (Expected 2026)</p>
+                <p>[University Name]</p>
+            </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="img/project1.jpg" alt="Project 1">
-                    <div class="portfolio-desc">
-                        <h3>Project One</h3>
-                        <p>Web application for real-time collaboration built with React and Node.js.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/project2.jpg" alt="Project 2">
-                    <div class="portfolio-desc">
-                        <h3>Project Two</h3>
-                        <p>Mobile app for task management using Flutter and Firebase.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="img/project3.jpg" alt="Project 3">
-                    <div class="portfolio-desc">
-                        <h3>Project Three</h3>
-                        <p>Personal portfolio website with responsive design and animations.</p>
-                    </div>
-                </div>
-            </div>
+            <section id="contact" class="info-section">
+                <h2>Contact</h2>
+                <p><i class="fas fa-envelope"></i> youremail@example.com</p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/your-github" target="_blank">GitHub</a></p>
+            </section>
         </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Minenhle Khanyile. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
