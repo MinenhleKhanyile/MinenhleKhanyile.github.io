@@ -42,7 +42,6 @@ body {
     font-size: 1.6em;
     transition: color 0.2s;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
