@@ -63,9 +63,9 @@ body {
 }
 
 .profile-logo {
-    position: absolute;
-    top: 40px;
-    right: 40px;
+    position: fixed;         /* Changed from absolute to fixed */
+    top: 20px;               /* Reduce to 20px for even closer to top */
+    right: 20px;             /* Reduce to 20px for even closer to right */
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -73,6 +73,7 @@ body {
     border: 5px solid #ec407a;
     box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
     background: #fff;
+    z-index: 100;            /* Ensure it's above other elements */
 }
 
 .profile-logo img {
